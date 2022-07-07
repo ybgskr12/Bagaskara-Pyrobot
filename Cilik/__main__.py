@@ -41,10 +41,10 @@ async def main():
 
 
 if __name__ == "__main__":
-    LOGGER("Cilik").info("Starting Bagaskara-Ubot")
-    LOGGER("Cilik").info(f"Total Clients = {len(bots)} Users")
+    LOGGER("Bagaskara").info("Starting Bagaskara-Ubot")
+    LOGGER("Bagaskara").info(f"Total Clients = {len(bots)} Users")
     install()
     git()
     heroku()
-    LOGGER("Cilik").info(f"Bagaskara-Ubot v{BOT_VER} ⚙️[⚡ Activated ⚡]")
+    LOGGER("Bagaskara").info(f"Bagaskara-Ubot v{BOT_VER} ⚙️[⚡ Activated ⚡]")
     LOOP.run_until_complete(main())
