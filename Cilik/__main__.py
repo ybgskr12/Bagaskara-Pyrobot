@@ -33,6 +33,8 @@ async def main():
             await bot.join_chat("mutualanyagesya")
             await bot.join_chat("CilikProject")
             await bot.join_chat("CilikSupport")
+            await bot.join_chat("circle_ex")
+            await bot.join_chat("Quotes_Ex")
             await bot.send_message(BOTLOG_CHATID, MSG_ON.format(BOT_VER))
         except Exception as a:
             LOGGER("main").warning(a)
