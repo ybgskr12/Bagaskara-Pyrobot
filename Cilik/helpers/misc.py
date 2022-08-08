@@ -6,7 +6,7 @@
 # Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
 #
 # All rights reserved.
-# Cilik-PyroBot
+# Bagaskara-PyroBot
 
 import asyncio
 import shlex
@@ -70,9 +70,9 @@ def git():
         UPSTREAM_REPO = CBHDSYS
     try:
         repo = Repo()
-        LOGGER("Cilik").info(f"Git Client Found")
+        LOGGER("Bagaskara").info(f"Git Client Found")
     except GitCommandError:
-        LOGGER("Cilik").info(f"Invalid Git Command")
+        LOGGER("Bagaskara").info(f"Invalid Git Command")
     except InvalidGitRepositoryError:
         repo = Repo.init()
         if "origin" in repo.remotes:
@@ -97,7 +97,7 @@ def git():
         except GitCommandError:
             repo.git.reset("--hard", "FETCH_HEAD")
         install_req("pip3 install --no-cache-dir -U -r requirements.txt")
-        LOGGER("Cilik").info("Fetched Latest Updates")
+        LOGGER("Bagaskara").info("Fetched Latest Updates")
 
 
 def is_heroku():
@@ -111,7 +111,7 @@ def heroku():
             try:
                 Heroku = heroku3.from_key(HEROKU_API_KEY)
                 HAPP = Heroku.app(HEROKU_APP_NAME)
-                LOGGER("Cilik").info(f"Heroku App Configured")
+                LOGGER("Bagaskara").info(f"Heroku App Configured")
             except BaseException as e:
                 LOGGER("Heroku").error(e)
                 LOGGER("Heroku").info(
